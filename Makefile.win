@@ -1,0 +1,42 @@
+# Project: yishu
+# Makefile created by Dev-C++ 5.3.0.1
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = yishu_private.res
+OBJ      = main.o GValue.o Component.o Event.o $(RES)
+LINKOBJ  = main.o GValue.o Component.o Event.o $(RES)
+LIBS     = -L"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows -m32 -g3
+INCS     = -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+CXXINCS  = -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+BIN      = yishu.exe
+CXXFLAGS = $(CXXINCS)  -m32 -g3
+CFLAGS   = $(INCS)  -m32 -g3
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before yishu.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "yishu.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+GValue.o: GValue.cpp
+	$(CPP) -c GValue.cpp -o GValue.o $(CXXFLAGS)
+
+Component.o: Component.cpp
+	$(CPP) -c Component.cpp -o Component.o $(CXXFLAGS)
+
+Event.o: Event.cpp
+	$(CPP) -c Event.cpp -o Event.o $(CXXFLAGS)
+
+yishu_private.res: yishu_private.rc resource.rc 
+	$(WINDRES) -i yishu_private.rc -F pe-i386 --input-format=rc -o yishu_private.res -O coff 
