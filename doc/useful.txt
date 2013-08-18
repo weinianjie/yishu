@@ -1,0 +1,11 @@
+1.使用sdk内置的窗口类（控件）创建对象后，可以这样替换默认的处理函数
+WNDPROC oldMsgProc = (WNDPROC)SetWindowLongPtr((hwnd, GWLP_WNDPROC, (LONG_PTR)myProc);
+消息处理最后return CallWindowProc(OldMsgProc,hwnd,message,wParam,lParam);中途不要break了
+
+2.子窗口的事件最终会传递到父窗口，触发父窗口接收到WM_COMMAND这个Notifications
+
+3.Message是可以使用SendMessage函数向控件发送出去，以更改控件的属性
+对于子控件使用SendDlgItemMessage成功率更高，说什么跟WM_COMMAND有关系
+
+3.Notifications是控件通过处理函数返回的通知
+

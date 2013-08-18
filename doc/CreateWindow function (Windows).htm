@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx -->
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="WT.seg_1" content="en-us"><link rel="canonical" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms632679(v=vs.85).aspx">
+        <title>CreateWindow function (Windows)</title>
+
+
+
+
+<meta name="DCS.dcsuri" content="/en-us/library/ms632679(d=default,l=en-us,v=vs.85).aspx">
+
+<meta name="NormalizedUrl" content="http://msdn.microsoft.com/en-us/library/ms632679(d=default,l=en-us,v=vs.85).aspx">
+
+<meta name="VotingContextUrl" content="http://msdn.microsoft.com/en-us/library/ms632679(d=default,l=en-us,v=vs.85).aspx">
+
+<meta name="MN" content="61C41DCF-6:45:03 AM">
+
+<meta name="Search.ShortId" content="ms632679">
+
+<meta name="Ms.Locale" content="en-us">
+
+
+
+
+
+
+
+
+        
+    <link rel="stylesheet" type="text/css" href="./CreateWindow function (Windows)_files/Combined.css"><script type="text/javascript" async="" src="./CreateWindow function (Windows)_files/ms2.js"></script><script class="mtps-injected">try {
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "http://i.msdn.microsoft.com", 
+	"js": "http://i2.msdn.microsoft.com", 
+	"css": "http://i3.msdn.microsoft.com"
+});
+/**/
+} finally { MTPS._injectNextScript_0 && MTPS._injectNextScript_0(); }</script><script class="mtps-injected" src="./CreateWindow function (Windows)_files/jquery-1.8.2.min.js"></script><script class="mtps-injected">try {
+//
+  var literalNormalizedUrl = '/en-us/library/ms632679(d=default,l=en-us,v=vs.85).aspx';
+  var wt_nvr_ru = 'WT_NVR_RU';
+  var wt_fpcdom = '.microsoft.com';
+  var wt_domlist = 'msdn.microsoft.com';
+  var wt_pathlist = '';
+  var wt_paramlist = 'DCSext.mtps_devcenter';
+  var wt_siteid = 'MSDN';
+  var gDomain = 'm.webtrends.com';
+  var gDcsId = 'dcsmgru7m99k7mqmgrhudo0k8_8c6m';
+  var gFpc = 'WT_FPC';
+
+
+
+  if (document.cookie.indexOf(gFpc + "=") == -1) {
+    var wtidJs = document.createElement("script");
+    wtidJs.src = "//" + gDomain + "/" + gDcsId + "/wtid.js";
+    document.getElementsByTagName("head")[0].appendChild(wtidJs);
+  }
+
+
+
+  var detectedLocale = 'en-us';
+  var wtsp = 'msdnlib_w32_com';
+  var gTrackEvents = '0';
+/**/
+} finally { MTPS._injectNextScript_2 && MTPS._injectNextScript_2(); }</script><script class="mtps-injected">try {
+/**/
+  var omni_guid = "f29a9da3-e435-4979-8205-eec7ca87972d";
+/**/
+} finally { MTPS._injectNextScript_3 && MTPS._injectNextScript_3(); }</script><script class="mtps-injected" src="./CreateWindow function (Windows)_files/Combined.js"></script><script class="mtps-injected" src="./CreateWindow function (Windows)_files/SearchBox.jss"></script><script class="mtps-injected" src="./CreateWindow function (Windows)_files/Combined(1).js"></script><script class="mtps-injected" src="./CreateWindow function (Windows)_files/jquery.tmpl.min.js"></script><script class="mtps-injected" src="./CreateWindow function (Windows)_files/Combined(2).js"></script><script src="./CreateWindow function (Windows)_files/broker.js"></script><script class="mtps-injected">try {
+$(document).ready(function() {
+        try {
+            var token = $("#globalRequestVerification input[name='__RequestVerificationToken']").clone();
+            $("#siteFeedbackForm").append(token);
+        } catch(err) {
+            
+        }
+    });
+} finally { MTPS._injectNextScript_9 && MTPS._injectNextScript_9(); }</script><link type="text/css" rel="stylesheet" href="./CreateWindow function (Windows)_files/PrintView.css" media="print"></head>
+    <body class="library">
+        <div id="page">
+            
+            
+  
+            
+    
+
+<div id="ux-header" class="">
+    <header>
+        <div class="row">
+            <div class="left">
+                <div data-fragmentname="SiteLogo" id="Fragment_SiteLogo" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://msdn.microsoft.com/en-us" id="27762_1" xmlns="http://www.w3.org/1999/xhtml">Developer Network</a>
+</div>     
+            </div>
+            <div id="grip"></div>  
+            <div class="right desktop">
+                <div class="auxNav">
+                    <div data-fragmentname="GetTools" id="Fragment_GetTools" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://msdn.microsoft.com/dn369242" id="27762_3" xmlns="http://www.w3.org/1999/xhtml">Get tools</a>
+</div>   
+                    <div data-fragmentname="Subscriptions" id="Fragment_Subscriptions" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="http://msdn.microsoft.com/dn369243" id="27762_5" xmlns="http://www.w3.org/1999/xhtml">MSDN subscriptions</a>
+</div>   
+                    
+
+    <div class="signIn"><a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1376660703&rver=6.0.5276.0&wp=MCLBI&wlcxt=MSDN%24MSDN%24MSDN&wreply=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2flibrary%2fms632679%2528v%3dvs.85%2529.aspx&lc=1033&id=254354&mkt=en-US" title="Sign in">Sign in</a></div>
+
+                </div>
+                
+
+    
+
+<div class="SearchBox">
+              <form id="HeaderSearchForm" name="HeaderSearchForm" method="get" action="http://social.msdn.microsoft.com/Search" onsubmit="return Epx.Controls.SearchBox.searchBoxOnSubmit(this, this.title);">
+            <input id="HeaderSearchTextBox" name="query" type="text" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(this, this.title, &#39;SearchBoxOnFocus&#39;)" onblur="Epx.Controls.SearchBox.watermarkBlur(this, this.title, &#39;SearchBoxOnFocus&#39;)" autocomplete="off">
+            <input id="RefinementId" name="refinement" type="hidden" value="">
+            <button id="HeaderSearchButton" value="" type="submit" class="header-search-button" title=""></button>
+        <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(255, 255, 255); font-family: &#39;Segoe UI&#39;, Tahoma, Helvetica, sans-serif; font-size: 13px;"><div id="SuggestionContainer"><ul style="list-style: none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;"></ul></div></div></form>
+        
+    
+</div>
+
+            </div>
+        </div>
+       
+        <div class="row" id="droor">
+            <div class="left">
+                        <nav>
+            <ul>
+                     <li class="inactive">
+
+                         <a href="http://msdn.microsoft.com/dn271881" title="Opportunity">Opportunity</a>
+                                 <div class="arrow"></div>
+                                 <div class="subNav">
+                                     <ul>
+                                                 <li><a href="http://msdn.microsoft.com/dn338451" title="iOS">iOS</a></li>
+                                                 <li><a href="http://msdn.microsoft.com/dn338440" title="Android">Android</a></li>
+                                                 <li><a href="http://msdn.microsoft.com/dn338449" title="Web">Web</a></li>
+                                                 <li><a href="http://msdn.microsoft.com/dn338450" title=".Net">.Net</a></li>
+                                                 <li><a href="http://msdn.microsoft.com/dn338447" title="Design">Design</a></li>
+                                                 <li><a href="http://msdn.microsoft.com/dn338446" title="Games">Games</a></li>
+                                     </ul>
+                                 </div>
+
+                     </li>
+                     <li class="inactive">
+
+                         <a href="http://msdn.microsoft.com/dn271880" title="Platform">Platform</a>
+                                 <div class="arrow"></div>
+                                 <div class="subNav">
+                                     <ul>
+                                                 <li><a href="http://msdn.microsoft.com/dn308583" title="Tablet &amp; PC">Tablet &amp; PC</a></li>
+                                                 <li><a href="http://msdn.microsoft.com/dn338268" title="Phone">Phone</a></li>
+                                                 <li><a href="http://msdn.microsoft.com/dn338159" title="Cloud">Cloud</a></li>
+                                     </ul>
+                                 </div>
+
+                     </li>
+                     <li class="inactive">
+
+                         <a href="http://msdn.microsoft.com/dn338064" title="Connect">Connect</a>
+                                 <div class="arrow"></div>
+                                 <div class="subNav">
+                                     <ul>
+                                                 <li><a href="http://msdn.microsoft.com/dn338452" title="Perspectives">Perspectives</a></li>
+                                                 <li><a href="http://events.msdn.microsoft.com/" title="Events">Events</a></li>
+                                                 <li><a href="http://social.msdn.microsoft.com/forums/" title="Forums">Forums</a></li>
+                                     </ul>
+                                 </div>
+
+                     </li>
+                     <li class="inactive">
+
+                         <a href="http://msdn.microsoft.com/dn292944" title="Downloads">Downloads</a>
+                                 <div class="arrow"></div>
+                                 <div class="subNav">
+                                     <ul>
+                                                 <li><a href="http://msdn.microsoft.com/dn369242" title="Developer tools">Developer tools</a></li>
+                                                 <li><a href="http://msdn.microsoft.com/dn369240" title="SDKs">SDKs</a></li>
+                                                 <li><a href="http://msdn.microsoft.com/dn369243" title="MSDN subscriptions">MSDN subscriptions</a></li>
+                                     </ul>
+                                 </div>
+
+                     </li>
+                     <li class="active current">
+
+                         <a href="http://msdn.microsoft.com/dn338067" title="Develop">Develop</a>
+                                 <div class="arrow"></div>
+                                 <div class="subNav">
+                                     <ul>
+                                                 <li class="current"><a href="http://msdn.microsoft.com/library" title="Library">Library</a></li>
+                                                 <li><a href="http://code.msdn.microsoft.com/" title="Code samples">Code samples</a></li>
+                                     </ul>
+                                 </div>
+
+                     </li>
+            </ul>
+          
+        </nav>        
+       
+            </div>
+            <div class="right mobile"></div>
+            <div class="right">
+                <div data-fragmentname="SocialLinks" id="Fragment_SocialLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div class="LinkListTitle">Join us</div>
+    <div class="Links">
+      <ul class="LinkColumn horizontal">
+        <li>
+          <a href="http://www.facebook.com/microsoftdeveloper" target="_blank" id="SocialLinks_430_7" class="facebook" xmlns="http://www.w3.org/1999/xhtml">http://www.facebook.com/microsoftdeveloper</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/msdev" target="_blank" id="SocialLinks_430_8" class="twitter" xmlns="http://www.w3.org/1999/xhtml">https://twitter.com/msdev</a>
+        </li>
+        <li>
+          <a href="http://plus.google.com/111221966647232053570/" target="_blank" id="SocialLinks_430_9" class="googlePlus" xmlns="http://www.w3.org/1999/xhtml">http://plus.google.com/111221966647232053570/</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> 
+            </div>
+			<span id="singleCol"></span>
+			<span id="doubleCol"></span>
+        </div>
+    </header>
+</div>
+
+
+
+        
+            <div id="body">
+                
+
+
+
+
+
+    <div id="leftNav" class="leftNavResize1">
+
+
+
+<div id="tocnav">
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ms123401.aspx" id="ms310241_MSDN.10_en-us" mtpsaliasid="" mtpsassetid="5DDC0A78-6B2C-43E3-9C56-55F45C0DFFA5_MSDN.10_en-us" mtpsshortid="ms123401_MSDN.10_en-us" title="MSDN Library">MSDN Library</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ee663300(v=vs.85).aspx" id="aa139672_MSDN.10_en-us" mtpsaliasid="" mtpsassetid="f61a75b8-8745-4146-8d76-d68614d838b4_MSDN.10_en-us" mtpsshortid="ee663300_VS.85_en-us" title="Windows Desktop App Development">Windows Desktop App Development</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa904962.aspx" id="hh309564_VS.85_en-us" mtpsaliasid="" mtpsassetid="C0D3A18C-D498-42B4-8015-883D16590B90_VS.85_en-us" mtpsshortid="aa904962_MSDN.10_en-us" title="Develop">Develop</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/bg125389.aspx" id="bg126501_VS.85_en-us" mtpsaliasid="" mtpsassetid="faa13803-ed43-4f9d-9cd7-07738d4545fd_VS.85_en-us" mtpsshortid="bg125389_MSDN.10_en-us" title="Desktop App Technologies">Desktop App Technologies</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ff657751(v=vs.85).aspx" id="bg126503_VS.85_en-us" mtpsaliasid="" mtpsassetid="3aa1d3b0-34e5-40de-bab0-e90926eaae04_VS.85_en-us" mtpsshortid="ff657751_VS.85_en-us" title="Desktop App UI">Desktop App UI</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ms632586(v=vs.85).aspx" id="ff729304_VS.85_en-us" mtpsaliasid="" mtpsassetid="VS|winui|~\winui\windowsuserinterface\windowing.htm_VS.85_en-us" mtpsshortid="ms632586_VS.85_en-us" title="Windows and Messages">Windows and Messages</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ms632595(v=vs.85).aspx" id="ff729307_VS.85_en-us" mtpsaliasid="" mtpsassetid="VS|winui|~\winui\windowsuserinterface\windowing\windows.htm_VS.85_en-us" mtpsshortid="ms632595_VS.85_en-us" title="Windows">Windows</a>            </div>
+            <div class="toclevel0" data-toclevel="0" style="padding-left: 0px;">
+<a class="toc_collapsed" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ff468925(v=vs.85).aspx" id="ff729311_VS.85_en-us" mtpsaliasid="" mtpsassetid="aedbac92-2aaa-4df2-a9f2-efee760152d5_VS.85_en-us" mtpsshortid="ff468925_VS.85_en-us" title="Window Reference">Window Reference</a>            </div>
+            <div class="toclevel1" data-toclevel="1" data-childrenloaded="true" style="padding-left: 17px;">
+<a class="toc_expanded" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#"></a><a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ff468919(v=vs.85).aspx" id="ff729314_VS.85_en-us" mtpsaliasid="" mtpsassetid="6303b0c8-5172-41d7-bd0e-40d3a7d024ba_VS.85_en-us" mtpsshortid="ff468919_VS.85_en-us" title="Window Functions">Window Functions</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632665(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="AdjustWindowRect">AdjustWindowRect</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632667(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="AdjustWindowRectEx">AdjustWindowRectEx</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632668(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="AllowSetForegroundWindow">AllowSetForegroundWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632669(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="AnimateWindow">AnimateWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632670(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="AnyPopup">AnyPopup</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632671(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ArrangeIconicWindows">ArrangeIconicWindows</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632672(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="BeginDeferWindowPos">BeginDeferWindowPos</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632673(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="BringWindowToTop">BringWindowToTop</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/dd565861(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CalculatePopupWindowPosition">CalculatePopupWindowPosition</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632674(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CascadeWindows">CascadeWindows</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632675(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ChangeWindowMessageFilter">ChangeWindowMessageFilter</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/dd388202(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ChangeWindowMessageFilterEx">ChangeWindowMessageFilterEx</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632676(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ChildWindowFromPoint">ChildWindowFromPoint</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632677(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ChildWindowFromPointEx">ChildWindowFromPointEx</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632678(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CloseWindow">CloseWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/hh405403(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CreateOwnedToolWindow">CreateOwnedToolWindow</a>            </div>
+            <div class="toclevel2 current" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632679(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CreateWindow">CreateWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632680(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="CreateWindowEx">CreateWindowEx</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632681(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="DeferWindowPos">DeferWindowPos</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms644979(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="DeregisterShellHookWindow">DeregisterShellHookWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms632682(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="DestroyWindow">DestroyWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633440(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EndDeferWindowPos">EndDeferWindowPos</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633492(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EndTask">EndTask</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633493(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EnumChildProc">EnumChildProc</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633494(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EnumChildWindows">EnumChildWindows</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633495(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EnumThreadWindows">EnumThreadWindows</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633496(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EnumThreadWndProc">EnumThreadWndProc</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633497(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EnumWindows">EnumWindows</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633498(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="EnumWindowsProc">EnumWindowsProc</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633499(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="FindWindow">FindWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633500(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="FindWindowEx">FindWindowEx</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633501(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetAltTabInfo">GetAltTabInfo</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633502(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetAncestor">GetAncestor</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633503(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetClientRect">GetClientRect</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633504(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetDesktopWindow">GetDesktopWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633505(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetForegroundWindow">GetForegroundWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633506(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetGUIThreadInfo">GetGUIThreadInfo</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633507(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetLastActivePopup">GetLastActivePopup</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633508(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetLayeredWindowAttributes">GetLayeredWindowAttributes</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633509(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetNextWindow">GetNextWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633510(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetParent">GetParent</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633511(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetProcessDefaultLayout">GetProcessDefaultLayout</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/dn302113(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetProcessDpiAwareness">GetProcessDpiAwareness</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633512(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetShellWindow">GetShellWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms724371(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetSysColor">GetSysColor</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633513(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetTitleBarInfo">GetTitleBarInfo</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633514(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetTopWindow">GetTopWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633515(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetWindow">GetWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/dd375338(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetWindowDisplayAffinity">GetWindowDisplayAffinity</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633516(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetWindowInfo">GetWindowInfo</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633517(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetWindowModuleFileName">GetWindowModuleFileName</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633518(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetWindowPlacement">GetWindowPlacement</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633519(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetWindowRect">GetWindowRect</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633520(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetWindowText">GetWindowText</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633521(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetWindowTextLength">GetWindowTextLength</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633522(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="GetWindowThreadProcessId">GetWindowThreadProcessId</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633523(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="InternalGetWindowText">InternalGetWindowText</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633524(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IsChild">IsChild</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633525(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IsGUIThread">IsGUIThread</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633526(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IsHungAppWindow">IsHungAppWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633527(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IsIconic">IsIconic</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/aa969261(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IsProcessDPIAware">IsProcessDPIAware</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633528(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IsWindow">IsWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633529(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IsWindowUnicode">IsWindowUnicode</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633530(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IsWindowVisible">IsWindowVisible</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633531(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IsZoomed">IsZoomed</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633532(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="LockSetForegroundWindow">LockSetForegroundWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633533(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="LogicalToPhysicalPoint">LogicalToPhysicalPoint</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633534(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="MoveWindow">MoveWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633535(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="OpenIcon">OpenIcon</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633536(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="PhysicalToLogicalPoint">PhysicalToLogicalPoint</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633537(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="RealChildWindowFromPoint">RealChildWindowFromPoint</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633538(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="RealGetWindowClass">RealGetWindowClass</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms644989(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="RegisterShellHookWindow">RegisterShellHookWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633539(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetForegroundWindow">SetForegroundWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633540(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetLayeredWindowAttributes">SetLayeredWindowAttributes</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633541(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetParent">SetParent</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633542(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetProcessDefaultLayout">SetProcessDefaultLayout</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633543(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetProcessDPIAware">SetProcessDPIAware</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/dn302122(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetProcessDpiAwareness">SetProcessDpiAwareness</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms724940(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetSysColors">SetSysColors</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/dd375340(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetWindowDisplayAffinity">SetWindowDisplayAffinity</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/hh405402(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetWindowFeedbackSettings">SetWindowFeedbackSettings</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633544(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetWindowPlacement">SetWindowPlacement</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633545(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetWindowPos">SetWindowPos</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633546(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SetWindowText">SetWindowText</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633547(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ShowOwnedPopups">ShowOwnedPopups</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633548(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ShowWindow">ShowWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633549(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="ShowWindowAsync">ShowWindowAsync</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/aa969269(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SoundSentry">SoundSentry</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633553(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="SwitchToThisWindow">SwitchToThisWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633554(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="TileWindows">TileWindows</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633556(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="UpdateLayeredWindow">UpdateLayeredWindow</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633557(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="UpdateLayeredWindowIndirect">UpdateLayeredWindowIndirect</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/aa969270(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="WindowFromPhysicalPoint">WindowFromPhysicalPoint</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633558(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="WindowFromPoint">WindowFromPoint</a>            </div>
+            <div class="toclevel2" data-toclevel="2" style="padding-left: 34px;">
+<span class="toc_empty"></span><a href="http://msdn.microsoft.com/en-us/library/ms633559(v=vs.85).aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="WinMain">WinMain</a>            </div>
+</div>
+        
+
+        
+
+        
+
+        
+
+<a id="NavigationResize" href="javascript:void(0)" style="left: 280px; display: inline-block;">
+    <img class="cl_nav_resize_open" src="./CreateWindow function (Windows)_files/ImageSprite.png" title="Expand" alt="Expand" style="">
+    <img class="cl_nav_resize_close" src="./CreateWindow function (Windows)_files/ImageSprite.png" title="Minimize" alt="Minimize" style="display: none;">
+</a>
+
+
+
+    </div>
+<div id="content" class="content" style="margin-left: 280px; width: auto;">
+
+
+
+
+
+
+
+    
+    
+
+    <div id="ratingCounterSeperator" class="cl_lw_vs_seperator" style="display: none;"></div>
+
+    
+
+
+        
+
+<div class="topic" xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title">CreateWindow function</h1><div id="ratingCounter" style="display: block;">
+        <span id="rcA" class="ratingText">
+            91 out of 127 rated this helpful <span id="rateThisPrefix">- </span><a id="rateThisTopic" href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#feedback" title="Rate this topic">Rate this topic</a>
+            
+        </span>
+    </div>
+  
+  <div id="mainSection">
+<div class="clsServerSDKContent">
+
+</div>
+<p>Creates an overlapped, pop-up, or child window. It specifies the window class, window title, window style, and (optionally) the initial position and size of the window. The function also specifies the window's parent or owner, if any, and the window's menu.</p>
+<p>To use extended window styles in addition to the styles supported by <strong>CreateWindow</strong>, use the <a href="http://msdn.microsoft.com/en-us/library/ms632680(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">CreateWindowEx</strong></a> function.</p>
+<h3>Syntax</h3>
+
+<div id="code-snippet-1" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTabSingle" dir="ltr"><a>C++</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_d8ac7e4a-ff12-43a5-9bb5-5e8ed27e408b');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_d8ac7e4a-ff12-43a5-9bb5-5e8ed27e408b" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+HWND WINAPI CreateWindow(
+  _In_opt_&nbsp;&nbsp;LPCTSTR lpClassName,
+  _In_opt_&nbsp;&nbsp;LPCTSTR lpWindowName,
+  _In_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DWORD dwStyle,
+  _In_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:Blue;">int</span> x,
+  _In_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:Blue;">int</span> y,
+  _In_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:Blue;">int</span> nWidth,
+  _In_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:Blue;">int</span> nHeight,
+  _In_opt_&nbsp;&nbsp;HWND hWndParent,
+  _In_opt_&nbsp;&nbsp;HMENU hMenu,
+  _In_opt_&nbsp;&nbsp;HINSTANCE hInstance,
+  _In_opt_&nbsp;&nbsp;LPVOID lpParam
+);
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+<h3>Parameters</h3>
+<dl>
+<dt><em>lpClassName</em> [in, optional]</dt>
+<dd>
+<p>Type: <strong>LPCTSTR</strong></p>
+<p>A <strong>null</strong>-terminated string or a class atom created by a previous call to the <a href="http://msdn.microsoft.com/en-us/library/ms633586(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">RegisterClass</strong></a> or <a href="http://msdn.microsoft.com/en-us/library/ms633587(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">RegisterClassEx</strong></a> function. The atom must be in the low-order word of <em>lpClassName</em>; the high-order word must be zero. If <em>lpClassName</em> is a string, it specifies the window class name. The class name can be any name registered with <strong>RegisterClass</strong> or <strong>RegisterClassEx</strong>, provided that the module that registers the class is also the module that creates the window. The class name can also be any of the predefined system class names. For a list of system class names, see the Remarks section. </p>
+</dd>
+<dt><em>lpWindowName</em> [in, optional]</dt>
+<dd>
+<p>Type: <strong>LPCTSTR</strong></p>
+<p>The window name. If the window style specifies a title bar, the window title pointed to by <em>lpWindowName</em> is displayed in the title bar. When using <strong>CreateWindow</strong> to create controls, such as buttons, check boxes, and static controls, use <em>lpWindowName</em> to specify the text of the control. When creating a static control with the <strong>SS_ICON</strong> style, use <em>lpWindowName</em> to specify the icon name or identifier. To specify an identifier, use the syntax "#<em>num</em>". </p>
+</dd>
+<dt><em>dwStyle</em> [in]</dt>
+<dd>
+<p>Type: <strong>DWORD</strong></p>
+<p>The style of the window being created. This parameter can be a combination of the <a href="http://msdn.microsoft.com/en-us/library/ms632600(v=vs.85).aspx">window style values</a>, plus the control styles indicated in the Remarks section. </p>
+</dd>
+<dt><em>x</em> [in]</dt>
+<dd>
+<p>Type: <strong>int</strong></p>
+<p>The initial horizontal position of the window. For an overlapped or pop-up window, the <em>x</em> parameter is the initial x-coordinate of the window's upper-left corner, in screen coordinates. For a child window, <em>x</em> is the x-coordinate of the upper-left corner of the window relative to the upper-left corner of the parent window's client area. If this parameter is set to <strong>CW_USEDEFAULT</strong>, the system selects the default position for the window's upper-left corner and ignores the <em>y</em> parameter. <strong>CW_USEDEFAULT</strong> is valid only for overlapped windows; if it is specified for a pop-up or child window, the <em>x</em> and <em>y</em> parameters are set to zero. </p>
+</dd>
+<dt><em>y</em> [in]</dt>
+<dd>
+<p>Type: <strong>int</strong></p>
+<p>The initial vertical position of the window. For an overlapped or pop-up window, the <em>y</em> parameter is the initial y-coordinate of the window's upper-left corner, in screen coordinates. For a child window, <em>y</em> is the initial y-coordinate of the upper-left corner of the child window relative to the upper-left corner of the parent window's client area. For a list box, <em>y</em> is the initial y-coordinate of the upper-left corner of the list box's client area relative to the upper-left corner of the parent window's client area.</p>
+<p>If an overlapped window is created with the <strong>WS_VISIBLE</strong> style bit set and the <em>x</em> parameter is set to <strong>CW_USEDEFAULT</strong>, then the <em>y</em> parameter determines how the window is shown. If the <em>y</em> parameter is <strong>CW_USEDEFAULT</strong>, then the window manager calls <a href="http://msdn.microsoft.com/en-us/library/ms633548(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">ShowWindow</strong></a> with the <strong>SW_SHOW</strong> flag after the window has been created. If the <em>y</em> parameter is some other value, then the window manager calls <strong>ShowWindow</strong> with that value as the <em>nCmdShow</em> parameter.</p>
+</dd>
+<dt><em>nWidth</em> [in]</dt>
+<dd>
+<p>Type: <strong>int</strong></p>
+<p>The width, in device units, of the window. For overlapped windows, <em>nWidth</em> is either the window's width, in screen coordinates, or <strong>CW_USEDEFAULT</strong>. If <em>nWidth</em> is <strong>CW_USEDEFAULT</strong>, the system selects a default width and height for the window; the default width extends from the initial x-coordinate to the right edge of the screen, and the default height extends from the initial y-coordinate to the top of the icon area. <strong>CW_USEDEFAULT</strong> is valid only for overlapped windows; if <strong>CW_USEDEFAULT</strong> is specified for a pop-up or child window, <em>nWidth</em> and <em>nHeight</em> are set to zero. </p>
+</dd>
+<dt><em>nHeight</em> [in]</dt>
+<dd>
+<p>Type: <strong>int</strong></p>
+<p>The height, in device units, of the window. For overlapped windows, <em>nHeight</em> is the window's height, in screen coordinates. If <em>nWidth</em> is set to <strong>CW_USEDEFAULT</strong>, the system ignores <em>nHeight</em>. </p>
+</dd>
+<dt><em>hWndParent</em> [in, optional]</dt>
+<dd>
+<p>Type: <strong>HWND</strong></p>
+<p>A handle to the parent or owner window of the window being created. To create a child window or an owned window, supply a valid window handle. This parameter is optional for pop-up windows.
+					</p>
+<p>
+						 To create a <a href="http://msdn.microsoft.com/en-us/library/ms632599(v=vs.85).aspx#message_only">message-only window</a>, supply <strong>HWND_MESSAGE</strong> or a handle to an existing message-only window. </p>
+</dd>
+<dt><em>hMenu</em> [in, optional]</dt>
+<dd>
+<p>Type: <strong>HMENU</strong></p>
+<p>A handle to a menu, or specifies a child-window identifier depending on the window style. For an overlapped or pop-up window, <em>hMenu</em> identifies the menu to be used with the window; it can be <strong>NULL</strong> if the class menu is to be used. For a child window, <em>hMenu</em> specifies the child-window identifier, an integer value used by a dialog box control to notify its parent about events. The application determines the child-window identifier; it must be unique for all child windows with the same parent window. </p>
+</dd>
+<dt><em>hInstance</em> [in, optional]</dt>
+<dd>
+<p>Type: <strong>HINSTANCE</strong></p>
+<p>A handle to the instance of the module to be associated with the window.</p>
+</dd>
+<dt><em>lpParam</em> [in, optional]</dt>
+<dd>
+<p>Type: <strong>LPVOID</strong></p>
+<p>A pointer to a value to be passed to the window through the <a href="http://msdn.microsoft.com/en-us/library/ms632603(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">CREATESTRUCT</strong></a> structure (<strong>lpCreateParams</strong> member) pointed to by the <em>lParam</em> param of the <a href="http://msdn.microsoft.com/en-us/library/ms632619(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_CREATE</strong></a> message.  This message is sent to the created window by this function before it returns.</p>
+<p>If an application calls <strong>CreateWindow</strong> to create a MDI client window, <em>lpParam</em> should point to a <a href="http://msdn.microsoft.com/en-us/library/ms632602(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">CLIENTCREATESTRUCT</strong></a> structure. If an MDI client window calls <strong>CreateWindow</strong> to create an MDI child window, <em>lpParam</em> should point to a <a href="http://msdn.microsoft.com/en-us/library/ms644910(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">MDICREATESTRUCT</strong></a> structure. <em>lpParam</em> may be <strong>NULL</strong> if no additional data is needed.</p>
+</dd>
+</dl>
+<h3>Return value</h3>
+<p>Type: <strong></strong></p><p><strong>Type: <strong>HWND</strong></strong></p><p></p>
+<p>If the function succeeds, the return value is a handle to the new window.</p>
+<p>If the function fails, the return value is <strong>NULL</strong>. To get extended error information, call <a href="http://msdn.microsoft.com/en-us/library/ms679360(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">GetLastError</strong></a>. </p>
+<p>This function typically fails for one of the following reasons: </p>
+<ul>
+<li>an invalid parameter value</li>
+<li>the system class was registered by a different module</li>
+<li>The <strong>WH_CBT</strong> hook is installed and returns a failure code</li>
+<li>if one of the controls in the dialog template is not registered, or its window window procedure fails <a href="http://msdn.microsoft.com/en-us/library/ms632619(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_CREATE</strong></a> or <a href="http://msdn.microsoft.com/en-us/library/ms632635(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_NCCREATE</strong></a>
+</li>
+</ul>
+<h3>Remarks</h3>
+<p>Before returning, <strong>CreateWindow</strong> sends a <a href="http://msdn.microsoft.com/en-us/library/ms632619(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_CREATE</strong></a> message to the window procedure. For overlapped, pop-up, and child windows, <strong>CreateWindow</strong> sends <strong>WM_CREATE</strong>, <a href="http://msdn.microsoft.com/en-us/library/ms632626(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_GETMINMAXINFO</strong></a>, and <a href="http://msdn.microsoft.com/en-us/library/ms632635(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_NCCREATE</strong></a> messages to the window. The
+ <em>lParam</em> parameter of the <strong>WM_CREATE</strong> message contains a pointer to a <a href="http://msdn.microsoft.com/en-us/library/ms632603(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">CREATESTRUCT</strong></a> structure. If the <strong>WS_VISIBLE</strong> style is specified, <strong>CreateWindow</strong> sends the window all the messages required to activate and show the window. </p>
+<p>If the created window is a child window, its default position is at the bottom of the Z-order. If the created window is a top-level window, its default position is at the top of the Z-order (but beneath all topmost windows unless the created window is itself topmost).</p>
+<p>For information on controlling whether the Taskbar displays a button for the created window, see <a href="http://msdn.microsoft.com/en-us/library/bb776822(v=vs.85).aspx">Managing Taskbar Buttons</a>. </p>
+<p>For information on removing a window, see the <a href="http://msdn.microsoft.com/en-us/library/ms632682(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">DestroyWindow</strong></a> function.</p>
+<p>The following predefined system classes can be specified in the <em>lpClassName</em> parameter. Note the corresponding control styles you can use in the <em>dwStyle</em> parameter.
+
+				</p>
+<table class="clsStd">
+<tbody><tr><th>System class</th><th>Meaning</th></tr>
+<tr><td><strong>BUTTON</strong></td><td>
+<p>Designates a small rectangular child window that represents a button the user can click to turn it on or off. Button controls can be used alone or in groups, and they can either be labeled or appear without text. Button controls typically change appearance when the user clicks them. For more information, see <a href="http://msdn.microsoft.com/en-us/library/bb775943(v=vs.85).aspx">Buttons</a>
+</p>
+<p>For a table of the button styles you can specify in the <em>dwStyle</em> parameter, see <a href="http://msdn.microsoft.com/en-us/library/bb775951(v=vs.85).aspx">Button Styles</a>.</p>
+</td></tr>
+<tr><td><strong>COMBOBOX</strong></td><td>
+<p>Designates a control consisting of a list box and a selection field similar to an edit control. When using this style, an application should either display the list box at all times or enable a drop-down list box. If the list box is visible, typing characters into the selection field highlights the first list box entry that matches the characters typed. Conversely, selecting an item in the list box displays the selected text in the selection field. </p>
+<p>For more information, see <a href="http://msdn.microsoft.com/en-us/library/bb775792(v=vs.85).aspx">Combo Boxes</a>. For a table of the combo box styles you can specify in the <em>dwStyle</em> parameter, see <a href="http://msdn.microsoft.com/en-us/library/bb775796(v=vs.85).aspx">Combo Box Styles</a>.</p>
+</td></tr>
+<tr><td><strong>EDIT</strong></td><td>
+<p>Designates a rectangular child window into which the user can type text from the keyboard. The user selects the control and gives it the keyboard focus by clicking it or moving to it by pressing the TAB key. The user can type text when the edit control displays a flashing caret; use the mouse to move the cursor, select characters to be replaced, or position the cursor for inserting characters; or use the BACKSPACE key to delete characters. For more information, see <a href="http://msdn.microsoft.com/en-us/library/bb775458(v=vs.85).aspx">Edit Controls</a>.</p>
+<p>For a table of the edit control styles you can specify in the <em>dwStyle</em> parameter, see <a href="http://msdn.microsoft.com/en-us/library/bb775464(v=vs.85).aspx">Edit Control Styles</a>.</p>
+</td></tr>
+<tr><td><strong>LISTBOX</strong></td><td>
+<p>Designates a list of character strings. Specify this control whenever an application must present a list of names, such as file names, from which the user can choose. The user can select a string by clicking it. A selected string is highlighted, and a notification message is passed to the parent window. For more information, see <a href="http://msdn.microsoft.com/en-us/library/bb775146(v=vs.85).aspx">List Boxes</a>.</p>
+<p>For a table of the list box styles you can specify in the <em>dwStyle</em> parameter, see <a href="http://msdn.microsoft.com/en-us/library/bb775149(v=vs.85).aspx">List Box Styles</a>.</p>
+</td></tr>
+<tr><td><strong>MDICLIENT</strong></td><td>
+<p>Designates an MDI client window. This window receives messages that control the MDI application's child windows. The recommended style bits are <strong>WS_CLIPCHILDREN</strong> and <strong>WS_CHILD</strong>. Specify the <strong>WS_HSCROLL</strong> and <strong>WS_VSCROLL</strong> styles to create an MDI client window that allows the user to scroll MDI child windows into view.</p>
+<p> For more information, see <a href="http://msdn.microsoft.com/en-us/library/ms632591(v=vs.85).aspx">Multiple Document Interface</a>.</p>
+</td></tr>
+<tr><td><strong>RichEdit</strong></td><td>
+<p>Designates a Microsoft Rich Edit&nbsp;1.0 control. This window lets the user view and edit text with character and paragraph formatting, and can include embedded Component Object Model (COM) objects. For more information, see <a href="http://msdn.microsoft.com/en-us/library/bb787605(v=vs.85).aspx">Rich Edit Controls</a>.</p>
+<p>For a table of the rich edit control styles you can specify in the <em>dwStyle</em> parameter, see <a href="http://msdn.microsoft.com/en-us/library/bb774367(v=vs.85).aspx">Rich Edit Control Styles</a>.</p>
+</td></tr>
+<tr><td><strong>RICHEDIT_CLASS</strong></td><td>
+<p>Designates a Microsoft Rich Edit&nbsp;2.0 control. This controls let the user view and edit text with character and paragraph formatting, and can include embedded COM objects. For more information, see <a href="http://msdn.microsoft.com/en-us/library/bb787605(v=vs.85).aspx">Rich Edit Controls</a>.</p>
+<p>For a table of the rich edit control styles you can specify in the <em>dwStyle</em> parameter, see <a href="http://msdn.microsoft.com/en-us/library/bb774367(v=vs.85).aspx">Rich Edit Control Styles</a>.</p>
+</td></tr>
+<tr><td><strong>SCROLLBAR</strong></td><td>
+<p>Designates a rectangle that contains a scroll box and has direction arrows at both ends. The scroll bar sends a notification message to its parent window whenever the user clicks the control. The parent window is responsible for updating the position of the scroll box, if necessary. For more information, see <a href="http://msdn.microsoft.com/en-us/library/bb787529(v=vs.85).aspx">Scroll Bars</a>.</p>
+<p>For a table of the scroll bar control styles you can specify in the <em>dwStyle</em> parameter, see <a href="http://msdn.microsoft.com/en-us/library/bb787533(v=vs.85).aspx">Scroll Bar Control Styles</a>.</p>
+</td></tr>
+<tr><td><strong>STATIC</strong></td><td>
+<p>Designates a simple text field, box, or rectangle used to label, box, or separate other controls. Static controls take no input and provide no output. For more information, see <a href="http://msdn.microsoft.com/en-us/library/bb760769(v=vs.85).aspx">Static Controls</a>.</p>
+<p>For a table of the static control styles you can specify in the <em>dwStyle</em> parameter, see <a href="http://msdn.microsoft.com/en-us/library/bb760773(v=vs.85).aspx">Static Control Styles</a>.</p>
+</td></tr>
+</tbody></table>
+<p>&nbsp;</p>
+<p><strong>CreateWindow</strong> is implemented as a call to the <a href="http://msdn.microsoft.com/en-us/library/ms632680(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">CreateWindowEx</strong></a> function, as shown below.</p>
+
+<div id="code-snippet-2" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if (window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_9c1587ee-a22c-4184-be14-9a0250811314');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_9c1587ee-a22c-4184-be14-9a0250811314" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>#define CreateWindowA(lpClassName, lpWindowName, dwStyle, x, y, nWidth, nHeight, hWndParent, hMenu, hInstance, lpParam)\
+CreateWindowExA(0L, lpClassName, lpWindowName, dwStyle, x, y, nWidth, nHeight, hWndParent, hMenu, hInstance, lpParam)
+
+#define CreateWindowW(lpClassName, lpWindowName, dwStyle, x, y, nWidth, nHeight, hWndParent, hMenu, hInstance, lpParam)\
+CreateWindowExW(0L, lpClassName, lpWindowName, dwStyle, x, y, nWidth, nHeight, hWndParent, hMenu, hInstance, lpParam)
+
+#ifdef UNICODE
+#define CreateWindow  CreateWindowW
+#else
+#define CreateWindow  CreateWindowA
+#endif
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+
+<h3>Examples</h3>
+<p>For an example, see <a href="http://msdn.microsoft.com/en-us/library/ms633575(v=vs.85).aspx">Using Window Classes</a>.</p>
+
+<h3>Requirements</h3>
+<table>
+<tbody><tr><th>
+<p>Minimum supported client</p>
+</th><td>Windows&nbsp;2000 Professional [desktop apps only]</td></tr>
+<tr><th>
+<p>Minimum supported server</p>
+</th><td>Windows&nbsp;2000 Server [desktop apps only]</td></tr>
+<tr><th>
+<p>Header</p>
+</th><td>
+<dl>
+<dt>Winuser.h (include Windows.h)</dt>
+</dl>
+</td></tr>
+<tr><th>
+<p>Unicode and ANSI names</p>
+</th><td><strong>CreateWindowW</strong> (Unicode) and <strong>CreateWindowA</strong> (ANSI)</td></tr>
+</tbody></table>
+<h3><a id="see_also"></a>See also</h3>
+<dl>
+<dt><strong>Reference</strong></dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms632680(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">CreateWindowEx</strong></a>
+</dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms632682(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">DestroyWindow</strong></a>
+</dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms646291(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">EnableWindow</strong></a>
+</dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms633586(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">RegisterClass</strong></a>
+</dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms633587(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">RegisterClassEx</strong></a>
+</dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms633548(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">ShowWindow</strong></a>
+</dt>
+<dt><a href="http://msdn.microsoft.com/en-us/library/bb775491(v=VS.85).aspx">Common Control Window Classes</a></dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms647591(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_COMMAND</strong></a>
+</dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms632619(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_CREATE</strong></a>
+</dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms632626(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_GETMINMAXINFO</strong></a>
+</dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms632635(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_NCCREATE</strong></a>
+</dt>
+<dt><strong>Conceptual</strong></dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms632595(v=vs.85).aspx">Windows</a>
+</dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/ms644908(v=vs.85).aspx">About the Multiple Document Interface</a>
+</dt>
+<dt><strong>Other Resources</strong></dt>
+<dt>
+<a href="http://msdn.microsoft.com/en-us/library/dd145213(v=vs.85).aspx"><strong xmlns="http://www.w3.org/1999/xhtml">WM_PAINT</strong></a>
+</dt>
+</dl>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="mailto:wsddocfb@microsoft.com?subject=Documentation%20feedback%20[winmsg\winmsg]:%20CreateWindow%20function%20%20RELEASE:%20(6/14/2013)&body=%0A%0APRIVACY%20STATEMENT%0A%0AWe%20use%20your%20feedback%20to%20improve%20the%20documentation.%20We%20don't%20use%20your%20email%20address%20for%20any%20other%20purpose,%20and%20we'll%20remove%20your%20email%20address%20from%20our%20system%20after%20the%20issue%20that%20you're%20reporting%20is%20fixed.%20While%20we're%20working%20to%20fix%20this%20issue,%20we%20might%20send%20you%20an%20email%20message%20to%20ask%20for%20more%20info.%20Later,%20we%20might%20also%20send%20you%20an%20email%20message%20to%20let%20you%20know%20that%20we've%20addressed%20your%20feedback.%0A%0AFor%20more%20info%20about%20Microsoft's%20privacy%20policy,%20see%20http://privacy.microsoft.com/en-us/default.aspx." title="Send comments about this topic to Microsoft">Send comments about this topic to Microsoft</a></p>
+<p>Build date: 6/14/2013</p>
+</div>
+</div>
+
+
+
+
+
+<p style="padding: 15px 0px; margin: 0px;"></p>
+    
+
+
+
+<script id="CommentTemplate" type="text/x-jquery-tmpl">
+    <div class="communityContentAnnotation">
+        <a name="${Index}"></a>
+        <h3>
+            ${Title}
+        </h3>
+        <div class="communityContentAnnotationBody">
+            {{html Body}}
+        </div>
+        <div class="communityContentAnnotationInfo">
+            <div class="communityContentAnnotationAvatarContainer">
+                <a href="${UserAvatar.Href}" title="${UserAvatar.ToolTip}" class="communityContentAnnotationAvatar"><img src="${UserAvatar.ImageUrl}" alt="${UserAvatar.ImageAltText}" width="34" height="34" /></a>
+            </div>
+            <div class="communityContentAnnotationUserDateContainer">
+                <div class="communityContentAnnotationUserContainer">
+                    <a href="${UserAvatar.Href}">
+                        ${User}
+                    </a>
+                </div>
+                <div class="communityContentAnnotationDateContainer">
+                    <span>${Date}</span>
+                    
+                    {{if EditLink}}
+                        <span>
+                            <a href="${EditLink.Href}" title="${EditLink.ToolTip}" class="communityContentCommentEditLink">${EditLink.Title}</a>
+                        </span>
+                    {{/if}}
+
+                    {{if DeleteLink}}
+                        <span>
+                            <a href="${DeleteLink.Href}" title="${DeleteLink.ToolTip}" class="communityContentDeleteLink">${DeleteLink.Title}</a>
+                        </span>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<div class="communityContentContainer">
+    <div id="CommunityContentHeader" class="communityContentHeader">
+        <div class="communityContentHeaderTitleContainer">
+            <h2>Community Additions</h2>
+                <a class="communityContentAddLink" href="http://msdn.microsoft.com/en-us/library/community/add/ms632679(v=vs.85).aspx">
+                    <span class="communityContentAddButton" title="Add">
+                        ADD
+                    </span>
+                </a>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    
+    <div id="CommunityComments" data-url="/en-us/library/community/comments/ms632679(v=vs.85).aspx"><div class="communityContentAnnotation">         <a name="7"></a>         <h3>             WM_GETMINMAXINFO sent before WM_CREATE         </h3>         <div class="communityContentAnnotationBody">             <p>The "Remarks" section says that CreateWindow send WM_NCCREATE, WM_NCCALCSIZE and&nbsp;WM_CREATE messages to the window being created.<br><br>I don't know if I did something wrong, but for my experience the CreateWindow function send WM_GETMINMAXINFO, WM_NCCREATE, WM_NCCALCSIZE and&nbsp;WM_CREATE.</p>         </div>         <div class="communityContentAnnotationInfo">             <div class="communityContentAnnotationAvatarContainer">                 <a href="http://social.msdn.microsoft.com/profile/linkinf94/" title="" class="communityContentAnnotationAvatar"><img src="./CreateWindow function (Windows)_files/avatar.jpg" alt="" width="34" height="34"></a>             </div>             <div class="communityContentAnnotationUserDateContainer">                 <div class="communityContentAnnotationUserContainer">                     <a href="http://social.msdn.microsoft.com/profile/linkinf94/">                         Linkinf94                     </a>                 </div>                 <div class="communityContentAnnotationDateContainer">                     <span>1/14/2013</span>                                                                                 </div>             </div>         </div>     </div><div class="communityContentAnnotation">         <a name="6"></a>         <h3>             test         </h3>         <div class="communityContentAnnotationBody">             <span><br>  <em>Enter comment here./*----------------------------------------</em><br></span><br><span><em>&nbsp; &nbsp;ENVIRON.C -- Environment List Box</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (c) Charles Petzold, 1998</em></span><br><span><em>&nbsp; ----------------------------------------*/</em></span><br><span><em><br></em></span><br><span><em>#include &lt;windows.h&gt;</em></span><br><span><em><br></em></span><br><span><em>#define ID_LIST &nbsp; &nbsp; 1</em></span><br><span><em>#define ID_TEXT &nbsp; &nbsp; 2</em></span><br><span><em><br></em></span><br><span><em>LRESULT CALLBACK WndProc (HWND, UINT, WPARAM, LPARAM) ;</em></span><br><span><em><br></em></span><br><span><em>int WINAPI WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PSTR szCmdLine, int iCmdShow)</em></span><br><span><em>{</em></span><br><span><em>&nbsp; &nbsp; &nbsp;static TCHAR szAppName[] = TEXT ("Environ") ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;HWND &nbsp; &nbsp; &nbsp; &nbsp; hwnd ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;MSG &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;msg ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;WNDCLASS &nbsp; &nbsp; wndclass ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.style &nbsp; &nbsp; &nbsp; &nbsp; = CS_HREDRAW | CS_VREDRAW ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.lpfnWndProc &nbsp; = WndProc ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.cbClsExtra &nbsp; &nbsp;= 0 ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.cbWndExtra &nbsp; &nbsp;= 0 ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.hInstance &nbsp; &nbsp; = hInstance ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.hIcon &nbsp; &nbsp; &nbsp; &nbsp; = LoadIcon (NULL, IDI_APPLICATION) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.hCursor &nbsp; &nbsp; &nbsp; = LoadCursor (NULL, IDC_ARROW) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.hbrBackground = (HBRUSH) (COLOR_WINDOW + 1) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.lpszMenuName &nbsp;= NULL ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;wndclass.lpszClassName = szAppName ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;if (!RegisterClass (&amp;wndclass))</em></span><br><span><em>&nbsp; &nbsp; &nbsp;{</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MessageBox (NULL, TEXT ("This program requires Windows NT!"),</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; szAppName, MB_ICONERROR) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 0 ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;}</em></span><br><span><em>&nbsp; &nbsp; &nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;hwnd = CreateWindow (szAppName, TEXT ("Environment List Box"),</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; WS_OVERLAPPEDWINDOW,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CW_USEDEFAULT, CW_USEDEFAULT,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CW_USEDEFAULT, CW_USEDEFAULT,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NULL, NULL, hInstance, NULL) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;ShowWindow (hwnd, iCmdShow) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;UpdateWindow (hwnd) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;while (GetMessage (&amp;msg, NULL, 0, 0))</em></span><br><span><em>&nbsp; &nbsp; &nbsp;{</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TranslateMessage (&amp;msg) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DispatchMessage (&amp;msg) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;}</em></span><br><span><em>&nbsp; &nbsp; &nbsp;return msg.wParam ;</em></span><br><span><em>}</em></span><br><span><em><br></em></span><br><span><em>void FillListBox (HWND hwndList)&nbsp;</em></span><br><span><em>{</em></span><br><span><em>&nbsp; &nbsp; &nbsp;int &nbsp; &nbsp; iLength ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;TCHAR * pVarBlock, * pVarBeg, * pVarEnd, * pVarName ;</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp;pVarBlock = GetEnvironmentStrings () ; &nbsp;// Get pointer to environment block</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp;while (*pVarBlock)</em></span><br><span><em>&nbsp; &nbsp; &nbsp;{</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (*pVarBlock != '=') &nbsp; // Skip variable names beginning with '='</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pVarBeg = pVarBlock ; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Beginning of variable name</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;while (*pVarBlock++ != '=') ; &nbsp; &nbsp; &nbsp;// Scan until '='</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pVarEnd = pVarBlock - 1 ; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Points to '=' sign</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iLength = pVarEnd - pVarBeg ; &nbsp; &nbsp; &nbsp;// Length of variable name</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Allocate memory for the variable name and terminating</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // zero. Copy the variable name and append a zero.</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pVarName = calloc (iLength + 1, sizeof (TCHAR)) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;CopyMemory (pVarName, pVarBeg, iLength * sizeof (TCHAR)) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pVarName[iLength] = '\0' ;</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Put the variable name in the list box and free memory.</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SendMessage (hwndList, LB_ADDSTRING, 0, (LPARAM) pVarName) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;free (pVarName) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; while (*pVarBlock++ != '\0') ; &nbsp; &nbsp; // Scan until terminating zero</em></span><br><span><em>&nbsp; &nbsp; &nbsp;}</em></span><br><span><em>&nbsp; &nbsp; &nbsp;FreeEnvironmentStrings (pVarBlock) ;</em></span><br><span><em>}</em></span><br><span><em><br></em></span><br><span><em>LRESULT CALLBACK WndProc (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)</em></span><br><span><em>{</em></span><br><span><em>&nbsp; &nbsp; &nbsp;static HWND &nbsp;hwndList, hwndText ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;int &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iIndex, iLength, cxChar, cyChar ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;TCHAR &nbsp; &nbsp; &nbsp;* pVarName, * pVarValue ;</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp;switch (message)</em></span><br><span><em>&nbsp; &nbsp; &nbsp;{</em></span><br><span><em>&nbsp; &nbsp; &nbsp;case WM_CREATE :</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cxChar = LOWORD (GetDialogBaseUnits ()) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cyChar = HIWORD (GetDialogBaseUnits ()) ;</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Create listbox and static text windows.</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; hwndList = CreateWindow (TEXT ("listbox"), NULL,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; WS_CHILD | WS_VISIBLE | LBS_STANDARD,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cxChar, cyChar * 3,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cxChar * 16 + GetSystemMetrics (SM_CXVSCROLL),</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cyChar * 5,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; hwnd, (HMENU) ID_LIST,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (HINSTANCE) GetWindowLong (hwnd, GWL_HINSTANCE),</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NULL) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; hwndText = CreateWindow (TEXT ("static"), NULL,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; WS_CHILD | WS_VISIBLE | SS_LEFT,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cxChar, cyChar,&nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; GetSystemMetrics (SM_CXSCREEN), cyChar,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; hwnd, (HMENU) ID_TEXT,</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (HINSTANCE) GetWindowLong (hwnd, GWL_HINSTANCE),</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NULL) ;</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; FillListBox (hwndList) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 0 ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;case WM_SETFOCUS :</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SetFocus (hwndList) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 0 ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;case WM_COMMAND :</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (LOWORD (wParam) == ID_LIST &amp;&amp; HIWORD (wParam) == LBN_SELCHANGE)</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Get current selection.</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iIndex &nbsp;= SendMessage (hwndList, LB_GETCURSEL, 0, 0) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iLength = SendMessage (hwndList, LB_GETTEXTLEN, iIndex, 0) + 1 ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pVarName = calloc (iLength, sizeof (TCHAR)) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SendMessage (hwndList, LB_GETTEXT, iIndex, (LPARAM) pVarName) ;</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Get environment string.</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iLength = GetEnvironmentVariable (pVarName, NULL, 0) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;pVarValue = calloc (iLength, sizeof (TCHAR)) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;GetEnvironmentVariable (pVarName, pVarValue, iLength) ;</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Show it in window.</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SetWindowText (hwndText, pVarValue) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;free (pVarName) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;free (pVarValue) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 0 ;</em></span><br><span><em><br></em></span><br><span><em>&nbsp; &nbsp; &nbsp;case WM_DESTROY :</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; PostQuitMessage (0) ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 0 ;</em></span><br><span><em>&nbsp; &nbsp; &nbsp;}</em></span><br><span><em>&nbsp; &nbsp; &nbsp;return DefWindowProc (hwnd, message, wParam, lParam) ;</em></span><br><span><em>}</em></span><br><br>         </div>         <div class="communityContentAnnotationInfo">             <div class="communityContentAnnotationAvatarContainer">                 <a href="http://social.msdn.microsoft.com/profile/dk.programmer/" title="" class="communityContentAnnotationAvatar"><img src="./CreateWindow function (Windows)_files/avatar(1).jpg" alt="" width="34" height="34"></a>             </div>             <div class="communityContentAnnotationUserDateContainer">                 <div class="communityContentAnnotationUserContainer">                     <a href="http://social.msdn.microsoft.com/profile/dk.programmer/">                         dk.programmer                     </a>                 </div>                 <div class="communityContentAnnotationDateContainer">                     <span>11/28/2012</span>                                                                                 </div>             </div>         </div>     </div><div class="communityContentAnnotation">         <a name="5"></a>         <h3>             String arguments need to be aligned         </h3>         <div class="communityContentAnnotationBody">             Note that the string arguments passed to this function MUST be aligned, so that the start is on a 8 byte boundary (64-bits for sure).<br><br>So if you compile your code with the /Zp1 option or a different alignment setting, then be aware!<br><br>If the address is something like 0xxxxxx1 instead of 0xxxxxxx0 or 0xxxxxx8 then the function will fail with an "invalid memory access" error.<br><br>It should either not fail, or this should be documented as a requirement in the function description!<br>         </div>         <div class="communityContentAnnotationInfo">             <div class="communityContentAnnotationAvatarContainer">                 <a href="http://social.msdn.microsoft.com/profile/ben_userdn/" title="" class="communityContentAnnotationAvatar"><img src="./CreateWindow function (Windows)_files/avatar(2).jpg" alt="" width="34" height="34"></a>             </div>             <div class="communityContentAnnotationUserDateContainer">                 <div class="communityContentAnnotationUserContainer">                     <a href="http://social.msdn.microsoft.com/profile/ben_userdn/">                         Ben_userdn                     </a>                 </div>                 <div class="communityContentAnnotationDateContainer">                     <span>3/15/2011</span>                                                                                 </div>             </div>         </div>     </div><div class="communityContentAnnotation">         <a name="4"></a>         <h3>             Some examples would be nice!!         </h3>         <div class="communityContentAnnotationBody">             There&nbsp;is&nbsp;no&nbsp;way&nbsp;to&nbsp;pass&nbsp;a&nbsp;class&nbsp;name&nbsp;into&nbsp;this&nbsp;function.&nbsp;&nbsp;No&nbsp;matter&nbsp;what&nbsp;type&nbsp;you&nbsp;use&nbsp;for&nbsp;the&nbsp;class&nbsp;name&nbsp;argument,&nbsp;I&nbsp;always&nbsp;get&nbsp;a&nbsp;"cannot&nbsp;convert&nbsp;&nbsp;'my&nbsp;type'&nbsp;to&nbsp;'LPCWSTR',&nbsp;even&nbsp;when&nbsp;using&nbsp;an&nbsp;LPCWSTR&nbsp;variable&nbsp;for&nbsp;the&nbsp;class&nbsp;name!<br><br><br>LPCWSTR&nbsp;is&nbsp;windows&nbsp;way&nbsp;of&nbsp;saying&nbsp;Long&nbsp;Pointer&nbsp;to&nbsp;Constant&nbsp;Wide&nbsp;STRing.&nbsp;The&nbsp;correct&nbsp;way&nbsp;to&nbsp;do&nbsp;it&nbsp;would&nbsp;be&nbsp;to&nbsp;either&nbsp;create&nbsp;a&nbsp;static&nbsp;string&nbsp;in&nbsp;the&nbsp;form&nbsp;of<br><br><br>L"WINDOW_CLASS_NAME"<br><br><br>or&nbsp;by&nbsp;create&nbsp;a&nbsp;const&nbsp;wide&nbsp;string&nbsp;and&nbsp;then&nbsp;passing&nbsp;in&nbsp;the&nbsp;address&nbsp;of&nbsp;that&nbsp;var<br><pre>const&nbsp;wchar_t&nbsp;myType;<br><br>CreateWindow(&amp;myType,.....);&nbsp;</pre>         </div>         <div class="communityContentAnnotationInfo">             <div class="communityContentAnnotationAvatarContainer">                 <a href="http://social.msdn.microsoft.com/profile/agentfat/" title="" class="communityContentAnnotationAvatar"><img src="./CreateWindow function (Windows)_files/avatar(3).jpg" alt="" width="34" height="34"></a>             </div>             <div class="communityContentAnnotationUserDateContainer">                 <div class="communityContentAnnotationUserContainer">                     <a href="http://social.msdn.microsoft.com/profile/agentfat/">                         Agentfat                     </a>                 </div>                 <div class="communityContentAnnotationDateContainer">                     <span>4/12/2010</span>                                                                                 </div>             </div>         </div>     </div><div class="communityContentAnnotation">         <a name="2"></a>         <h3>             When creating a window, the messages are delivered to the queue of the thread that created it.         </h3>         <div class="communityContentAnnotationBody">             <p>This has been my experience.  If you want to put your message loop in another thread, then you'll have to create the window in that thread as well.</p><br><p>I am unaware of any method to "retarget" queues for windows.</p>         </div>         <div class="communityContentAnnotationInfo">             <div class="communityContentAnnotationAvatarContainer">                 <a href="http://social.msdn.microsoft.com/profile/elliot_009/" title="" class="communityContentAnnotationAvatar"><img src="./CreateWindow function (Windows)_files/avatar(4).jpg" alt="" width="34" height="34"></a>             </div>             <div class="communityContentAnnotationUserDateContainer">                 <div class="communityContentAnnotationUserContainer">                     <a href="http://social.msdn.microsoft.com/profile/elliot_009/">                         Elliot_009                     </a>                 </div>                 <div class="communityContentAnnotationDateContainer">                     <span>4/15/2009</span>                                                                                 </div>             </div>         </div>     </div><div class="communityContentAnnotation">         <a name="1"></a>         <h3>             Creating a maximized or minimized window         </h3>         <div class="communityContentAnnotationBody">             The WS_MINIMIZE and WS_MAXIMIZE styles may be ignored depending on the values specified in STARTUPINFO.dwFlags and STARTUPINFO.wShowWindow when the process was created.          </div>         <div class="communityContentAnnotationInfo">             <div class="communityContentAnnotationAvatarContainer">                 <a href="http://social.msdn.microsoft.com/profile/gc04/" title="" class="communityContentAnnotationAvatar"><img src="./CreateWindow function (Windows)_files/avatar(5).jpg" alt="" width="34" height="34"></a>             </div>             <div class="communityContentAnnotationUserDateContainer">                 <div class="communityContentAnnotationUserContainer">                     <a href="http://social.msdn.microsoft.com/profile/gc04/">                         gc04                     </a>                 </div>                 <div class="communityContentAnnotationDateContainer">                     <span>1/2/2008</span>                                                                                 </div>             </div>         </div>     </div></div>
+</div>
+
+
+ 
+</div>
+
+
+            </div>
+            <div class="clear"></div>
+        
+            
+    
+<input name="__RequestVerificationToken" type="hidden" value="60f2iePPxN5bQ97X5ZOie8fTsrPKwKiqemolpfRTWaV0yKYgDINMYfhHXdZUJWwZwUlSg2DzYLZuAuCkj-B5CPMRgFy_Bg7_VdcAxewEy-vw0IfZ4DcYXBwh_P69cYpCFpK8-Q2">
+<input id="ratingSubmitUrl" type="hidden" value="http://msdn.microsoft.com/en-us/library/feedback/add/ms632679(v=vs.85).aspx">
+<input id="isTopicRated" type="hidden" value="false">
+
+
+
+    
+
+<div id="ux-footer">
+    <footer class="top">
+        <div data-fragmentname="LeftLinks" id="Fragment_LeftLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div class="LinkListTitle">Dev centers</div>
+    <div class="Links">
+      <ul class="LinkColumn" style="width: 100%">
+        <li>
+          <a href="http://msdn.microsoft.com/windows" id="27861_1" class="windowsBlue" xmlns="http://www.w3.org/1999/xhtml">Windows</a>
+        </li>
+        <li>
+          <a href="http://dev.windowsphone.com/" id="27861_2" class="windowsPurple" xmlns="http://www.w3.org/1999/xhtml">Windows Phone</a>
+        </li>
+        <li>
+          <a href="http://msdn.microsoft.com/office" id="27861_3" class="office" xmlns="http://www.w3.org/1999/xhtml">Office</a>
+        </li>
+        <li>
+          <a href="http://www.windowsazure.com/en-us/documentation/" id="27861_4" class="windowsBlue" xmlns="http://www.w3.org/1999/xhtml">Windows Azure</a>
+        </li>
+        <li>
+          <a href="http://msdn.microsoft.com/vstudio" id="27861_5" class="visualStudio" xmlns="http://www.w3.org/1999/xhtml">Visual Studio</a>
+        </li>
+        <li>
+          <a href="http://msdn.microsoft.com/aa937802" id="27861_6" xmlns="http://www.w3.org/1999/xhtml">More...</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>    
+        <div id="rightLinks">
+            <div data-fragmentname="CenterLinks1" id="Fragment_CenterLinks1" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div class="LinkListTitle">Learning resources</div>
+    <div class="LinkListDescription"></div>
+    <div class="Links">
+      <ul class="LinkColumn" style="width: 100%">
+        <li>
+          <a href="http://www.microsoftvirtualacademy.com/" id="27861_14" xmlns="http://www.w3.org/1999/xhtml">Microsoft Virtual Academy</a>
+        </li>
+        <li>
+          <a href="http://channel9.msdn.com/" id="27861_16" xmlns="http://www.w3.org/1999/xhtml">Channel 9</a>
+        </li>
+        <li>
+          <a href="http://www.interoperabilitybridges.com/" id="27861_17" xmlns="http://www.w3.org/1999/xhtml">Interoperability Bridges</a>
+        </li>
+        <li>
+          <a href="http://msdn.microsoft.com/magazine/" id="CenterLinks1_427_33" xmlns="http://www.w3.org/1999/xhtml">MSDN Magazine</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+            <div data-fragmentname="CenterLinks2" id="Fragment_CenterLinks2" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div class="LinkListTitle">Community</div>
+    <div class="LinkListDescription"></div>
+    <div class="Links">
+      <ul class="LinkColumn" style="width: 100%">
+        <li>
+          <a href="http://social.msdn.microsoft.com/forums/en-us/home" id="27861_19" xmlns="http://www.w3.org/1999/xhtml">Forums</a>
+        </li>
+        <li>
+          <a href="http://blogs.msdn.com/b/developer-tools/" id="27861_20" xmlns="http://www.w3.org/1999/xhtml">Blogs</a>
+        </li>
+        <li>
+          <a href="http://www.codeplex.com/" id="27861_22" xmlns="http://www.w3.org/1999/xhtml">Codeplex</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+            <div data-fragmentname="CenterLinks3" id="Fragment_CenterLinks3" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div class="LinkListTitle">Support</div>
+    <div class="LinkListDescription"></div>
+    <div class="Links">
+      <ul class="LinkColumn" style="width: 100%">
+        <li>
+          <a href="http://msdn.microsoft.com/hh361695" id="CenterLinks3_427_34" xmlns="http://www.w3.org/1999/xhtml">Self support</a>
+        </li>
+        <li>
+          <a href="http://support.microsoft.com/" id="27861_24" xmlns="http://www.w3.org/1999/xhtml">Other support options</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+            <div data-fragmentname="CenterLinks4" id="Fragment_CenterLinks4" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div class="LinkListTitle">Programs</div>
+    <div class="LinkListDescription"></div>
+    <div class="Links">
+      <ul class="LinkColumn" style="width: 100%">
+        <li>
+          <a href="http://www.microsoft.com/bizspark/" id="27861_27" xmlns="http://www.w3.org/1999/xhtml">BizSpark (for startups)</a>
+        </li>
+        <li>
+          <a href="https://www.dreamspark.com/" id="27861_28" xmlns="http://www.w3.org/1999/xhtml">DreamSpark</a>
+        </li>
+        <li>
+          <a href="https://www.microsoft.com/faculty" id="27861_29" xmlns="http://www.w3.org/1999/xhtml">Faculty Connection</a>
+        </li>
+        <li>
+          <a href="http://www.microsoft.com/student/" id="CenterLinks4_427_32" xmlns="http://www.w3.org/1999/xhtml">Microsoft Student</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    <div class="feedbackContainer">
+        <div id="feedbackSection1" class="clear">
+            <div class="left">Did you find this helpful?</div>
+            <div class="left">
+                <div class="left">
+                    <input type="radio" name="feedback" id="feedbackYes" value="1" class="feedbackYesClick" data-enhance="false"><label class="feedbackYesClick" for="feedbackYes"> Yes</label>
+                </div>
+                <div class="left">
+                    <input type="radio" name="feedback" id="feedbackNo" value="0" class="feedbackNoClick" data-enhance="false"><label class="feedbackNoClick" for="feedbackNo"> No</label>
+                </div>
+            </div>
+            <a class="rateThisAnchor" name="feedback"></a>
+        </div>
+        <div id="feedbackSection2" class="clear">
+        </div>
+        <div id="feedbackSection3" class="clear">
+                    <div>
+                        <input id="checkboxNo201" name="chkbxNo" type="checkbox" value="201" data-enhance="false">
+                        <label for="checkboxNo201">Not accurate</label>
+                    </div>
+                    <div>
+                        <input id="checkboxNo202" name="chkbxNo" type="checkbox" value="202" data-enhance="false">
+                        <label for="checkboxNo202">Not enough depth</label>
+                    </div>
+                    <div>
+                        <input id="checkboxNo203" name="chkbxNo" type="checkbox" value="203" data-enhance="false">
+                        <label for="checkboxNo203">Need more code examples</label>
+                    </div>
+        </div>
+        <div id="feedbackSection4" class="clear">
+            <div>
+                <textarea id="feedbackTextArea" name="feedbackText" class="TellUsMoreTextBoxSearchLoaded" data-enhance="false">Tell us more...</textarea>
+            </div>
+            <div class="left"><span class="counter">(<span id="feedbackTextCounter">1500</span> characters remaining)</span></div>
+            <div class="right">
+                <input type="submit" id="feedbackSubmit" value="Submit" title="Click to Submit Feedback" data-enhance="false">
+            </div>
+        </div>
+        <div id="feedbackSection5">Thank you for your feedback</div>
+        <input id="feedbackValue" type="hidden" value="">
+        <input id="tellUsMoreText" type="hidden" value="Tell us more...">
+        <input id="maxTextBoxCharacters" type="hidden" value="1500">
+    </div>
+        </div>
+    </footer>
+    
+    <footer class="bottom">
+        <span class="localeContainer">
+            
+    <form class="selectLocale" id="selectLocaleForm" action="http://msdn.microsoft.com/en-us/SelectLocale">
+        <input type="hidden" name="fromPage" value="http%3a%2f%2fmsdn.microsoft.com%2fen-us%2flibrary%2fms632679(v%3dvs.85).aspx">
+        <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx#" onclick="$(&#39;#selectLocaleForm&#39;).submit();return false;" title="Change your language">United States (English)</a>
+    </form>    
+
+
+        </span>
+        
+        <div data-fragmentname="BottomLinks" id="Fragment_BottomLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="LinkList">
+    <div class="LinkListDescription"></div>
+    <div class="Links">
+      <ul class="LinkColumn horizontal">
+        <li>
+          <a href="http://msdn.microsoft.com/newsletter.aspx" id="27861_8" xmlns="http://www.w3.org/1999/xhtml">Newsletter</a>
+        </li>
+        <li>
+          <a href="http://privacy.microsoft.com/default.mspx" id="27861_10" xmlns="http://www.w3.org/1999/xhtml">Privacy &amp; cookies</a>
+        </li>
+        <li>
+          <a href="http://msdn.microsoft.com/cc300389.aspx" id="27861_11" xmlns="http://www.w3.org/1999/xhtml">Terms of Use</a>
+        </li>
+        <li>
+          <a href="http://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" id="27861_12" xmlns="http://www.w3.org/1999/xhtml">Trademarks</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>    
+        <span class="logoLegal">
+            <span class="logo"></span>
+            <span class="copyright">© 2013 Microsoft</span>
+        </span>
+    </footer>
+</div>
+
+
+            <div class="footerPrintView">
+                <div class="footerCopyrightPrintView">© 2013 Microsoft. All rights reserved.</div>
+            </div>
+
+            
+            
+    
+    
+    <input id="tocPaddingPerLevel" type="hidden" value="17">
+
+
+        
+            <input id="MtpsDevice" type="hidden" value="Default">
+
+
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+        
+            
+            
+            
+            
+            
+        
+
+
+
+
+
+<noscript>&lt;div&gt;&lt;img alt="DCSIMG" id="Img1" width="1" height="1" src="http://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;amp;WT.js=No" /&gt;&lt;/div&gt;</noscript>
+
+
+
+
+
+
+
+
+
+<noscript>
+  &lt;a href="http://www.omniture.com" title="Web Analytics"&gt;
+    &lt;img src="//msstonojsmsdn.112.2o7.net/b/ss/msstonojsmsdn/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" /&gt;
+  &lt;/a&gt;
+</noscript>
+
+
+
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" type="hidden" value="BWSuyHSw0EKFtkcg-jbEaXR3ZTUKSGbfcm8eh5bQ491VJ0TsoIRJgNCx24aiLqTW5bLDtkyNy3vkNk1Fydkbq5aYJy5zuz73PDJUss6Wkz_zw8i-JSgb6Q_6erqljXkJvjVAGQ2">
+</div>
+
+
+        </div>
+    <script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function preload(scripts){for(var result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return result}function inject(scripts,index){var script,elem;if(index>=scripts.length){delete mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { \r\n\t\"image\": \"http://i.msdn.microsoft.com\", \r\n\t\"js\": \"http://i2.msdn.microsoft.com\", \r\n\t\"css\": \"http://i3.msdn.microsoft.com\"\r\n});\r\n/**/" },
+	{ url: "http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js" },
+	{ txt: "//\n  var literalNormalizedUrl = \u0027/en-us/library/ms632679(d=default,l=en-us,v=vs.85).aspx\u0027;\n  var wt_nvr_ru = \u0027WT_NVR_RU\u0027;\n  var wt_fpcdom = \u0027.microsoft.com\u0027;\n  var wt_domlist = \u0027msdn.microsoft.com\u0027;\n  var wt_pathlist = \u0027\u0027;\n  var wt_paramlist = \u0027DCSext.mtps_devcenter\u0027;\n  var wt_siteid = \u0027MSDN\u0027;\n  var gDomain = \u0027m.webtrends.com\u0027;\n  var gDcsId = \u0027dcsmgru7m99k7mqmgrhudo0k8_8c6m\u0027;\n  var gFpc = \u0027WT_FPC\u0027;\n\n\n\n  if (document.cookie.indexOf(gFpc + \"=\") == -1) {\n    var wtidJs = document.createElement(\"script\");\n    wtidJs.src = \"//\" + gDomain + \"/\" + gDcsId + \"/wtid.js\";\n    document.getElementsByTagName(\"head\")[0].appendChild(wtidJs);\n  }\n\n\n\n  var detectedLocale = \u0027en-us\u0027;\n  var wtsp = \u0027msdnlib_w32_com\u0027;\n  var gTrackEvents = \u00270\u0027;\n/**/" },
+	{ txt: "/**/\n  var omni_guid = \"f29a9da3-e435-4979-8205-eec7ca87972d\";\n/**/" },
+	{ url: "http://i2.msdn.microsoft.com/Combined.js?resources=0:Utilities,0:Topic,1:webtrendsscript,2:omni_rsid_MSDN,3:SearchBox;/Areas/Epx/Content/Scripts:0,/Areas/Global/Content/Webtrends/resources:1,/Areas/Global/Content/Omniture/resources/MSDN:2,/Areas/Epx/Themes/Base/Content:3\u0026amp;hashKey=61F0FB52A7A36B61DFB9AFD9270F0B57" },
+	{ url: "http://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026brand=MSDN\u0026loc=en-us\u0026focusOnInit=false\u0026emptyWatermark=true" },
+	{ url: "http://i2.msdn.microsoft.com/Combined.js?resources=0:layout,1:Header,2:Toc,2:NavigationResize,3:FeedbackCounter,3:Feedback;/Areas/Centers/Themes/Base/Content:0,/Areas/Centers/Themes/Msdn/Content:1,/Areas/Epx/Library/Content:2,/Areas/Epx/Shared/Content:3\u0026amp;hashKey=9706369E0E6A38B3C4973B3A19D8F447" },
+	{ url: "http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" },
+	{ url: "http://i2.msdn.microsoft.com/Combined.js?resources=0:CommunityContent,1:Rating,0:CodeSnippet,0:TopicNotInScope,0:CollapsibleArea,0:VersionSelector,0:SurveyBroker;/Areas/Epx/Content/Scripts:0,/Areas/Centers/Themes/Msdn/Content:1\u0026amp;hashKey=7CB0318B6AFE36D93D05E828B9AFA666" },
+	{ txt: "$(document).ready(function() {\n        try {\n            var token = $(\"#globalRequestVerification input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n            $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n            \n        }\n    });" }
+]);
+
+/*]]>*/
+</script>
+<script src="./CreateWindow function (Windows)_files/broker-config.js"></script><div id="_WEDCSInsertedData" style="display: none;"><iframe id="_msnFrame" src="./CreateWindow function (Windows)_files/c.gif" style="z-index:-1;height:1px;width:1px;display:none;visibility:hidden;" onload="javascript:MscomBeacon();"></iframe></div></body></html>
