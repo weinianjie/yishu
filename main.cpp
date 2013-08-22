@@ -12,7 +12,7 @@
 
 using namespace ht;
 
-LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam);
+LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam); 
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
 	WNDCLASSEX wc; /* A properties struct of our window */
@@ -40,7 +40,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	}
 	
 
-	hwnd = CreateWindowEx(WS_EX_CLIENTEDGE,"WindowClass","艺术家神器",WS_VISIBLE|WS_OVERLAPPEDWINDOW,
+	hwnd = CreateWindowEx(WS_EX_CLIENTEDGE,"WindowClass","色象字",WS_VISIBLE|WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, /* x */
 		CW_USEDEFAULT, /* y */
 		800, /* width */
@@ -79,7 +79,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) {
 	
-	int wmId, wmEvent;
+	static int wmId, wmEvent;
+	static RECT rc;
 	
 	switch(Message) {
 		
@@ -111,7 +112,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 			
 			//文本改变 || 状态按钮点击 
 			if(wmEvent == EN_CHANGE || wmId == IDC_CHECKBOX_ENCODE) {
-				RECT rc;
+				
 				GetClientRect(hwnd,&rc);
 				
 				//先强行设置整个画布无效，否则调用UpdateWindow的时候只更新被覆盖的地方 
