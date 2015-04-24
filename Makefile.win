@@ -7,12 +7,12 @@ WINDRES  = windres.exe
 RES      = yishu_private.res
 OBJ      = main.o GValue.o Component.o Event.o $(RES)
 LINKOBJ  = main.o GValue.o Component.o Event.o $(RES)
-LIBS     = -L"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows -m32 -g3
+LIBS     = -L"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows -m32 -pg -g3
 INCS     = -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
 CXXINCS  = -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
 BIN      = yishu.exe
-CXXFLAGS = $(CXXINCS)  -m32 -g3
-CFLAGS   = $(INCS)  -m32 -g3
+CXXFLAGS = $(CXXINCS)  -m32 -pg -g3
+CFLAGS   = $(INCS)  -m32 -pg -g3
 RM       = rm -f
 
 .PHONY: all all-before all-after clean clean-custom

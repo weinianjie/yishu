@@ -13,6 +13,9 @@ namespace ht {
 			return RGB(0, 0, 0);
 		}
 		COLORREF color = RGB((( 0xff <<16 & hex ) >> 16),(( 0xff <<8 & hex ) >> 8),(0xff & hex));
+//		COLORREF color = RGB((( 0xff <<8 & hex ) >> 8),(( 0xff <<16 & hex ) >> 16),(0xff & hex));//交换R和G
+//		COLORREF color = RGB((0xff & hex),(( 0xff <<8 & hex ) >> 8),(( 0xff <<16 & hex ) >> 16));//交换R和B 
+//		COLORREF color = RGB((( 0xff <<16 & hex ) >> 16),(0xff & hex),(( 0xff <<8 & hex ) >> 8));//交换G和B 
 		return color;
     }	
 	
@@ -51,6 +54,18 @@ namespace ht {
 	HWND GValue::G_hwnd_screen             = NULL;
 	HWND GValue::G_hwnd_canvas             = NULL;
 
+
+int			GValue::canvas_width 		= 0;//画布长度
+int 		GValue::canvas_height 		= 0;//画布宽度
+
+int			GValue::screen_width 		= 0;//屏幕长度
+int			GValue::screen_height 		= 0;//屏幕宽度
+
+int			GValue::position_width 		= 0;//当前位置的横坐标
+int			GValue::position_height 	= 0;//当前位置的纵坐标
+
+int			GValue::hb_pos 				= 0;//竖直方向滚动条当前位置
+int			GValue::vb_pos 				= 0;//水平方向滚动条当前位置
 	//---------------------------------------------------------------------
 	
 

@@ -2,7 +2,7 @@
 
 // rc /n /v /fo Hello.res Hello.rc
 
-IDI_MWIND ICON "res\\C.ico"
+IDI_MWIND ICON "res\\F.ico"
 //
 // Bitmap
 //

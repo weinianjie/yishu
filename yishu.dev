@@ -6,7 +6,7 @@ Ver=2
 ObjFiles=
 Includes=
 Libs=
-PrivateResource=
+PrivateResource=yishu_private.rc
 ResourceIncludes=
 MakeIncludes=
 Compiler=
@@ -28,7 +28,7 @@ CustomMakefile=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=0000000100000000001000000
+CompilerSettings=0000000100000000101000000
 UnitCount=9
 
 [VersionInfo]
@@ -121,8 +121,9 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit8]
-FileName=resource.rc
-Folder=Resources
+FileName=resource.h
+CompileCpp=1
+Folder=yishu
 Compile=1
 Link=1
 Priority=1000
@@ -130,11 +131,10 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit9]
-FileName=resource.h
-CompileCpp=1
-Folder=
+FileName=resource.rc
+Folder=yishu
 Compile=1
-Link=1
+Link=0
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=

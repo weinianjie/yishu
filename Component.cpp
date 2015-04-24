@@ -138,6 +138,20 @@ namespace ht {
 	}
 	LRESULT CALLBACK ScreenProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) {
 		switch(Message) {		
+			case WM_SIZE: {
+				ResizeScreen(wParam, lParam);
+				break;
+			}
+
+			case WM_HSCROLL : {		
+				HscrollChange(wParam, lParam);
+				break;
+			}
+	
+			case WM_VSCROLL : {
+				VscrollChange(wParam, lParam);
+				break;
+			}
 		
 			case WM_CLOSE: {
 				DestroyWindow(hwnd);
@@ -179,7 +193,7 @@ namespace ht {
 					0,
 	        		"Screen",
 	        		"",
-	        		WS_CHILD | WS_VISIBLE | WS_BORDER | WS_GROUP | WS_TABSTOP | ES_WANTRETURN,
+	        		WS_CHILD | WS_VISIBLE | WS_BORDER | WS_VSCROLL | WS_HSCROLL,
 	        		0, UI_TOP(4), width, (height - UI_TOP(4)),
 	        		GValue::G_hwnd,
 	        		(HMENU)IDC_SCREEN,
@@ -228,15 +242,15 @@ namespace ht {
 			RECT rc;
 			GetClientRect(GValue::G_hwnd,&rc); 
 		
-			int width=rc.right-rc.left;
-			int height=rc.bottom-rc.top;
+			GValue::canvas_width=rc.right-rc.left;
+			GValue::canvas_height=rc.bottom-rc.top;
 			
 			GValue::G_hwnd_canvas = CreateWindowEx(
 					0,
 	        		"Canvas",
 	        		"",
 	        		WS_CHILD | WS_VISIBLE | WS_BORDER,
-	        		10, 10, width - 20, (height - UI_TOP(4) - 20),
+	        		0, 0, GValue::canvas_width, GValue::canvas_height,
 	        		GValue::G_hwnd_screen,
 	        		(HMENU)IDC_CANVAS,
 	        		GValue::G_hinstance,

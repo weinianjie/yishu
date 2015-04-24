@@ -13,6 +13,12 @@ namespace ht {
 	
 	void TrySeveDeskBmp();
 	
+	void VscrollChange(WPARAM wParam, LPARAM lParam); 
+	
+	void HscrollChange(WPARAM wParam, LPARAM lParam); 
+	
+	void ResizeScreen(WPARAM wParam, LPARAM lParam);
+	
 }
 
 #endif

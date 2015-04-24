@@ -49,6 +49,18 @@ namespace ht {
 			static		HWND	G_hwnd_article;
 			static		HWND	G_hwnd_screen;
 			static		HWND	G_hwnd_canvas; 
+			
+			static int			canvas_width;//画布长度
+			static int 			canvas_height;//画布宽度
+			
+			static int			screen_width;//屏幕长度
+			static int			screen_height;//屏幕宽度
+			
+			static int			position_width;//当前位置的横坐标
+			static int			position_height;//当前位置的纵坐标
+			
+			static int			hb_pos;//竖直方向滚动条当前位置
+			static int			vb_pos;//水平方向滚动条当前位置
     };
 }
 
